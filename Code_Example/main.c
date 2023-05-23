@@ -75,7 +75,7 @@ int main()
   /* Start timer */
   sTimerInst.pfvStart();
 
-
+  /* initialization of receive data structure */
   EEP24LCXXData_t sRData =
   {
     .u16StartAddress   = 0x00,
@@ -85,7 +85,8 @@ int main()
     .pfvCbkRcv         = vToggleLedBlue,
     .pfvCbkTransmitEnd = vToggLedGreen
   };
-
+  
+  /* Initialization of tx data structure */
    EEP24LCXXData_t sWData =
   {
     .u16StartAddress   = 0x00,
